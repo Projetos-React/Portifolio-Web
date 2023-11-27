@@ -53,7 +53,9 @@ export default function Contato() {
   return (
     <section id="Contact" className="sectionContact">
       <h1 className="contactTitle">Fale comigo</h1>
-      <p className="contactDescription">Envie-me uma mensagem para que possamos conversar melhor.</p>
+      <p className="contactDescription">
+        Envie-me uma mensagem para que possamos conversar melhor.
+      </p>
       <form onSubmit={sendMessage} className="formContact">
         <div className="sectionInfo">
           <label htmlFor="Nome">Nome</label>
@@ -94,6 +96,7 @@ export default function Contato() {
             type="tel"
             name="Telefone"
             id="Telefone"
+            placeholder="(84) 98754-8540"
             value={formValue.Telefone}
             onChange={handleInput}
             required

@@ -1,19 +1,13 @@
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { menuItems } from "../ultils/ultis";
 
 interface Props{
   toggleTheme():void;
 }
 
 export default function Menu({toggleTheme} : Props) {
-  const menuItens = [
-    ["Home", "HeroSection"],
-    ["Skills", "MySkills"],
-    ["Sobre mim", "AboutMe"],
-    ["Projetos", "MyProjects"],
-    ["Contato", "Contact"],
-  ];
   const [light, SetLight] = useState(true);
   const handleTheme = () => {
     SetLight(!light);
@@ -26,11 +20,11 @@ export default function Menu({toggleTheme} : Props) {
       </Link>
       <div className="NavBar">
         <ul>
-          {menuItens.map((item) => {
+          {menuItems.map((item) => {
             return (
               <li>
                 <Link
-                  to={item[1]}
+                  to={item.id}
                   activeClass="nav-selected"
                   className="nav-itens"
                   spy={true}
@@ -38,7 +32,7 @@ export default function Menu({toggleTheme} : Props) {
                   offset={-70}
                   duration={500}
                 >
-                  {item[0]}
+                  {item.title}
                 </Link>
               </li>
             );

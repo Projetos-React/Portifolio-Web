@@ -5,7 +5,7 @@ export default function HeroSection(){
         <section id="HeroSection">
             <div className="HeroContet">
                 <p className="HeroSaudacao">Olá, eu sou Matheus Albert</p>
-                <h1 className="HeroTitle">Desenvolvedor web</h1>
+                <h1 className="HeroTitle">Desenvolvedor web<br />Front-End</h1>
                 <p className="HeroResume">Entusiasta do universo da programação.
                     < br/> Pronto a encarar novos desafios, gosto de criar soluções web úteis e práticas.
                 </p>

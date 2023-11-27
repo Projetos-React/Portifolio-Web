@@ -9,6 +9,10 @@ export default createGlobalStyle`
   -webkit-font-smoothing: "Roboto", sans-serif;
   -moz-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
+  img{
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 }
 
 :root {
@@ -50,6 +54,7 @@ export default createGlobalStyle`
   font-size: 56px;
   margin-top: 30px;
   color: ${(props) => props.theme.colors.headingColor};
+  line-height: 60px;
 }
 
 .HeroResume {
@@ -82,7 +87,7 @@ export default createGlobalStyle`
 .btn_cv:hover {
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.primary};
-  border: ${(props) => props.theme.colors.primary};
+  border: 1px solid ${(props) => props.theme.colors.primary};
 }
 
 .HeroImg img {
@@ -215,9 +220,8 @@ export default createGlobalStyle`
   justify-content: center;
   max-width: 220px;
   max-height: 196px;
-  transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.1s;
 }
-
 .cardSkill p {
   color: ${(props) => props.theme.colors.black};
   font-weight: 500;
@@ -351,11 +355,18 @@ export default createGlobalStyle`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.colors.github};
-  color: ${(props) => props.theme.colors.white};
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.5s;
+  a{
+    color: ${(props) => props.theme.colors.white};
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .sectionMore .more {
@@ -365,7 +376,9 @@ export default createGlobalStyle`
 .sectionMore .moreProjects:hover {
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.colors.github};
-  color: ${(props) => props.theme.colors.github};
+  a{
+    color: ${(props) => props.theme.colors.github};
+  }
 }
 
 .sectionContact {

@@ -3,20 +3,13 @@ import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { menuItems } from "../ultils/ultis";
 
 interface Props{
   toggleTheme():void;
 }
 
 export default function MenuMobile({toggleTheme}:Props) {
-
-  const menuItens = [
-    ["Home", "HeroSection"],
-    ["Skills", "MySkills"],
-    ["Sobre mim", "AboutMe"],
-    ["Projetos", "MyProjects"],
-    ["Contato", "Contact"],
-  ];
   const [light, SetLight] = useState(true);
   const handleTheme = () => {
     SetLight(!light);
@@ -43,11 +36,11 @@ export default function MenuMobile({toggleTheme}:Props) {
         <div className="nav-mobile">
           <div className="lst-mobile">
             <ul>
-              {menuItens.map((item) => {
+              {menuItems.map((item) => {
                 return (
                   <li>
                     <Link
-                      to={item[1]}
+                      to={item.id}
                       activeClass="nav-selected"
                       className="nav-itens"
                       spy={true}
@@ -56,7 +49,7 @@ export default function MenuMobile({toggleTheme}:Props) {
                       duration={500}
                       onClick={handleShownav}
                     >
-                      {item[0]}
+                      {item.title}
                     </Link>
                   </li>
                 );
