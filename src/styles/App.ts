@@ -91,9 +91,12 @@ export default createGlobalStyle`
 }
 
 .HeroImg img {
-  width: 90%;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   float: right;
+}
+.HeroImg{
+  width: 100%;
 }
 
 .nav {
@@ -360,7 +363,7 @@ export default createGlobalStyle`
   cursor: pointer;
   transition: 0.5s;
   a{
-    color: ${(props) => props.theme.colors.white};
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -548,6 +551,9 @@ export default createGlobalStyle`
   .formContact {
     width: 80%;
   }
+  .CardProject img{
+    height: 20vh;
+  }
 }
 @media screen and (max-width: 1000px) {
   .skillsType {
@@ -558,16 +564,16 @@ export default createGlobalStyle`
   }
   #HeroSection {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    background-color: ${(props) => props.theme.colors.white};
-  }
-  .CardProject img {
-    height: 300px;
+    padding: 80px 60px 133px;
   }
   .sectionAboutme img {
     display: none;
+  }
+  .CardProject img{
+    height: 15vh;
   }
   .Footer {
     flex-direction: column;
@@ -591,6 +597,9 @@ export default createGlobalStyle`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .CardProject img{
+    height: 30vh;
   }
   .sectionMore .moreProjects {
     width: 30%;

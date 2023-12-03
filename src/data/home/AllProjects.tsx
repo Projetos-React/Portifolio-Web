@@ -26,6 +26,7 @@ export default function AllProjects() {
   };
   return (
     <section className="section"  style={{marginTop: '50px'}}>
+    <h1 className="projectsTitle">Meus Projetos</h1>
       <section className="sectionProjects">
         {projects.map((project) => {
           return (

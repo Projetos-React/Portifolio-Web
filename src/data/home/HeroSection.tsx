@@ -15,7 +15,8 @@ export default function HeroSection(){
                 </div>
             </div>
             <div className="HeroImg">
-                <img src="./images/HeroImg.png" alt="Imagem da página Hero" />
+                {/* <img src="./images/HeroImg.png" alt="Imagem da página Hero" /> */}
+                <img src='./images/perfil_teste.png' alt='Imagem de perfil profissional'/>
             </div>
         </section>
     )

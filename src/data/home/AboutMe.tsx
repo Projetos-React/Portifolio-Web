@@ -22,7 +22,7 @@ export default function AboutMe() {
           várias linguagens de programação, sendo as que mais domino: Reactjs,
           C++, Java e Javascript. No entanto, hoje meu foco está voltado para
           Reactjs e Java, mais especificamente nos frameworks Nextjs e Spring
-          Boot. Você pode ver um pouco mais sobre minhas skills e os projetos
+          Boot. Você pode ver um pouco mais sobre os projetos
           que trabalhei ou estou trabalhando logo abaixo.
         </p>
       </div>
